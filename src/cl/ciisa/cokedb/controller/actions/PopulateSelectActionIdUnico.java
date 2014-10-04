@@ -13,12 +13,8 @@ import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
 import cl.ciisa.cokedb.model.IdUnicoBeans;
-import cl.ciisa.cokedb.model.MermaBeans;
 import cl.ciisa.cokedb.services.impl.IdUnicoService;
-import cl.ciisa.cokedb.services.impl.MermaService;
 import cl.ciisa.cokedb.services.interfaces.IIdUnicoService;
-import cl.ciisa.cokedb.services.interfaces.IMermasService;
-
 
 public class PopulateSelectActionIdUnico extends Action {
 
