@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Context path="/CokeDb" docBase="CokeDb" debug="5"
+	reloadable="true" crossContext="true">
+	
+	<Resource 
+		name="jdbc/DB_mySQL_CokeDb" 
+		auth="Container"
+		type="javax.sql.DataSource" 
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/CokeDb?autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull" 
+		username="root" 
+		password="" 
+		maxActive="20" 
+		maxIdle="2"
+		maxWait="10000" 
+		removeAbandoned="true" 
+		removeAbandonedTimeout="5" 
+		logAbandoned="true" 
+		defaultAutoCommit="false"
+		testOnBorrow="true"		
+        validationQuery="SELECT 1 FROM DUAL"
+		/> 
+</Context>

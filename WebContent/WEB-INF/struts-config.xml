@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="AgregarCentCostForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarCentCostForm" />
+		<form-bean name="agregarUsuarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarUsuarioForm" />
+		<form-bean name="AgregarInvPorUsuarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarInvPorUsuarioForm" />	
+		<form-bean name="BorrarCentCostForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.BorrarCentCostForm" />	
+		<form-bean name="SeleccionarUsuarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.SeleccionarUsuarioForm" />
+		<form-bean name="ActualizarUsuarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.ActualizarUsuarioForm" />
+		<form-bean name="ActualizarCentCostForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.ActualizarCentCostForm" />	
+		<form-bean name="AgregarAreaDescForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarAreaDescForm" />
+		<form-bean name="BorrarAreaDescForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.BorrarAreaDescForm" />	
+		<form-bean name="ActualizarAreaDescForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.ActualizarAreaDescForm" />
+		<form-bean name="AgregarTipoForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarTipoForm" />
+		<form-bean name="BorrarTipoForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.BorrarTipoForm" />	
+		<form-bean name="ActualizarTipoForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.ActualizarTipoForm" />
+		<form-bean name="AgregarItAssetsForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarItAssetsForm" />	
+		<form-bean name="AgregarInventarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.AgregarInventarioForm" />	
+		<form-bean name="ActualizarInventarioForm" 
+			type="cl.ciisa.cgalvez.inventory.controller.forms.ActualizarInventarioForm" />						
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards>
+		
+	</global-forwards>
+
+	<action-mappings>
+
+		<action input="/AgregarCentCost.jsp" name="AgregarCentCostForm" 
+			path="/CentroCosto" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarCentCostAction" 
+			validate="true">
+			<forward name="success" path="/listarCentCost.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/BorrarCentCost.jsp" name="BorrarCentCostForm" 
+			path="/BorrarCentroCosto" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.BorrarCentCostAction" 
+			validate="true">
+			<forward name="success" path="/listarCentCost.jsp" />
+			<forward name="failure" path="/ErrorEliminarCentCost.jsp" />
+		</action>
+		
+		<action path="/PopulateSelectAction" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectAction">
+			<forward name="success" path="/AgregarUsuario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action path="/PopulateSelectActionUsers" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionUsers">
+			<forward name="success" path="/AgregarInvPorUsuario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		
+		<action path="/PopulateSelectActionCentCost" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionCentCost">
+			<forward name="success" path="/BorrarCentCost.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/AgregarUsuario.jsp" name="agregarUsuarioForm" 
+			path="/AgregarUsuario" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarUsuarioAction" 
+			validate="true">
+			<forward name="success" path="/ListarUserList.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/AgregarInvPorUsuario.jsp" name="AgregarInvPorUsuarioForm" 
+			path="/InvXUsuario" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarInvPorUsuarioAction" 
+			validate="true">
+			<forward name="success" path="/ListarUsuariosAssets.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- Actualizar USUARIO  -->
+		
+		<action path="/PopulateSelectActionActualizarUser" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionUsers">
+			<forward name="success" path="/SeleccionarUsuario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/SeleccionarUsuario.jsp" name="SeleccionarUsuarioForm" 
+			path="/SeleccionarUsuario" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.SeleccionarUsuarioAction" 
+			validate="true">
+			<forward name="success" path="/ActualizarUsuario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/ActualizarUsuario.jsp" name="ActualizarUsuarioForm" 
+			path="/ActualizarUsuario" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.ActualizarUsuarioAction" 
+			validate="true">
+			<forward name="success" path="/ListarUserList.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- FIN Actualizar USUARIO  -->
+		
+		<!-- Actualizar CENTRO COSTO -->
+		
+		<action path="/PopulateSelectActualizarActionCentCost" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionCentCost">
+			<forward name="success" path="/ActualizarCentCost.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="/ActualizarCentCost.jsp" name="ActualizarCentCostForm" 
+			path="/ActualizarCentroCosto" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.ActualizarCentCostAction" 
+			validate="true">
+			<forward name="success" path="/listarCentCost.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+
+		<!-- FIN CENTRO COSTO -->
+		
+		<!--AGREGAR AREA-->
+		
+		<action input="AgregarArea.jsp" name="AgregarAreaDescForm" 
+			path="/AgregarArea" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarAreaDescAction" 
+			validate="true">
+			<forward name="success" path="/ListarAreas.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- FIN AGREGAR AREA -->
+		
+		<!-- BORRAR AREA -->
+		
+		<action path="/PopulateSelectBorrarArea" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionUsers">
+			<forward name="success" path="/BorrarArea.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="BorrarArea.jsp" name="BorrarAreaDescForm" 
+			path="/BorrarArea" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.BorrarAreaDescAction" 
+			validate="true">
+			<forward name="success" path="/ListarAreas.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		<!-- FIN BORRAR AREA -->
+		
+		<!-- ACTUALIZAR AREA -->
+		<action path="/PopulateSelectActualizarArea" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionUsers">
+			<forward name="success" path="/ActualizarArea.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="ActualizarArea.jsp" name="ActualizarAreaDescForm" 
+			path="/ActualizarArea" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.ActualizarAreaDescAction" 
+			validate="true">
+			<forward name="success" path="/ListarAreas.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		
+		<!-- FIN ACTUALIZAR AREA -->
+		
+		<!-- Agregar TIpo -->
+		
+		<action input="AgregarTipo.jsp" name="AgregarTipoForm" 
+			path="/AgregarTipo" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarTipoAction" 
+			validate="true">
+			<forward name="success" path="/ListarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		
+		<!-- fin agregar tipo -->
+		
+		<!-- BORRAR TIPO -->
+		
+		<action path="/SelectBorrarTipo" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/BorrarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="BorrarTipo.jsp" name="BorrarTipoForm" 
+			path="/BorrarTipo" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.BorrarTipoAction" 
+			validate="true">
+			<forward name="success" path="/ListarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		
+		<!-- FIN BORRAR TIPO -->
+		
+		<!-- ACTUALIZAR TIPO -->
+		
+		<action path="/SelectActualizarTipo" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/ActualizarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>	
+			
+		<action input="ActualizarTipo.jsp" name="ActualizarTipoForm" 
+			path="/ActualizarTipo" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.ActualizarTipoAction" 
+			validate="true">
+			<forward name="success" path="/ListarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>		
+		
+		<!-- FIN ACTUALIZAR TIPO -->
+		
+		<!-- AGREGAR IT ASSETS -->
+		
+		<action path="/SelectAgregarInventario" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/AgregarItAssets.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="AgregarItAssets.jsp" name="AgregarItAssetsForm" 
+			path="/AgregarItAssets" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarItAssetsAction" 
+			validate="true">
+			<forward name="success" path="/ListarItAssets.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>	
+		
+		<!-- FIN AGREGAR IT ASSETS -->
+		
+		<!-- Agregar inventario -->
+		
+		<action path="/SelectAgregarItAssets" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/AgregarInventario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="AgregarInventario.jsp" name="AgregarInventarioForm" 
+			path="/AgregarStock" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.AgregarInventarioAction" 
+			validate="true">
+			<forward name="success" path="/ListarInventario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- fin agregar inventario -->
+		
+		<!-- Actualizar Inventario -->
+		
+		<action path="/SelectActualizarInvAssets" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/ActualizarInventario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<action input="ActualizarInventario.jsp" name="ActualizarInventarioForm" 
+			path="/ActualizarInventario" scope="request" 
+			type="cl.ciisa.cgalvez.inventory.controller.actions.ActualizarInventarioAction" 
+			validate="true">
+			<forward name="success" path="/ListarInventario.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- fin actualizar inevntario -->
+		
+		<!-- listar usuarios -->
+		
+		<action path="/PopulateListarUsers" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionUsers">
+			<forward name="success" path="/ListarUserList.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		
+		<!-- fin listar usuarios -->
+		
+		<!-- listar centros de costo -->
+		<action path="/PopulateListarCentCost" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionCentCost">
+			<forward name="success" path="/listarCentCost.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>
+		<!-- fin listar centos de costo -->
+		
+		<!-- Listar Areas -->
+		<action path="/PopulateListarAreas" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectAction">
+			<forward name="success" path="/ListarAreas.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>		
+		<!-- fin listar areas -->
+		
+		
+		
+		<!-- listar tipo objetos -->
+		<action path="/PopulateListarTipos" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/ListarTipo.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>	
+		<!-- fin listar tipo objetos -->
+		
+		<!-- listar it assets -->
+		<action path="/PopulateListarItAssets" type="cl.ciisa.cgalvez.inventory.controller.actions.PopulateSelectActionAssets">
+			<forward name="success" path="/ListarItAssets.jsp" />
+			<forward name="failure" path="/error.jsp" />
+		</action>	
+		<!-- fin listar tipo objetos -->
+		
+		
+		<!-- fin listar it assets -->
+		
+		
+	</action-mappings>
+
+	<message-resources parameter="cl.ciisa.cgalvez.inventory.resources.MessageResources" />
+
+</struts-config>
+
