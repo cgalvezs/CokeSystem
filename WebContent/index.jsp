@@ -30,7 +30,7 @@
     </nav>
   </header>
 </div>
-<!-- content -->
+<!-- content  yesenia-->
 <div class="wrapper row2">
   <div id="container" class="clear">
     
