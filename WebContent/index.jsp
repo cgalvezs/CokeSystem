@@ -7,6 +7,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+	<meta content="img/favicon.jpg" itemprop="image" />
+</head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="layout.css" type="text/css">
 <title>Listar Centro de Costos</title>
@@ -16,18 +18,13 @@
 <div class="wrapper row1">
   <header id="header" class="clear">
     <div id="hgroup">
-      <!-- <h1><a href="/Inventory">ZevLabG</a></h1> -->
-      <h1><a href="/Inventory" target="_self">
- 				<img src="img/logo.png" width="150 150" "/></h1>
-      <h2>Inventory System's</h2>
+      <h1>Coke!</h1>
+      <h2>&nbsp &nbsp &nbsp &nbsp Open happiness!</h2>
     </div>
     <nav>
       <ul>
-      	<li><a href="/Inventory">Home</a></li>
-        <li><a href="/Inventory/Usuarios.jsp">Usuarios</a></li>
-        <li><a href="/Inventory/CentCost.jsp">Centros de Costo</a></li>
-        <li><a href="/Inventory/Areas.jsp">Áreas</a></li>
-        <li><a href="/Inventory/Inventario.jsp">Inventario</a></li>
+      	<li><a href="/CokeSystem">Home</a></li>
+        <li><a href="/CokeSystem">Login</a></li>
         <li class="last"><a href="#"></li>
       </ul>
     </nav>
@@ -40,8 +37,8 @@
     <!-- main content -->
     <div id="homepage" class="clear">
       <section id="services" class="clear">
-        <h1 style="color: orange;" align="center">PROYECTO DE PROGRAMACION CON COMPONENTES</h1>
-        <h1 align="center">Alumno: Cristóbal Gálvez</h1>
+        <h1 style="color: orange;" align="center">TALLER DE DESARROLLO DE BASES DE DATOS</h1>
+        <h1 align="center">Alumnos: Yesenia Doria, Rodrigo Romo, Nicolas Trincado, Cristóbal Gálvez, Benjamin Acuña</h1>
       </section>
 
     </div>
